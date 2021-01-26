@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # DSL - Domain Specific Language
+  # all the routing syntax
+  get "/adventurers", to: "adventurers#index", as: "adventurers" # adventurers_path
+  get "/adventurers/:id", to: "adventurers#show", as: "adventurer", constraints: { id: /\d+/ } # adventurer_path
 end
