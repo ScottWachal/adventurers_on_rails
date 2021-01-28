@@ -1,0 +1,21 @@
+Models
+
+Model: Adventurer
+- id: integer (auto incrementing PK)
+- name: string (varchar 255)
+- created_at: timestamp (auto generated)
+- updated_at: timestamp (auto generated)
+
+Model: Item
+- id: integer
+- name: string
+- price: decimal
+- description: text (MORE CHARACTERS)
+#- adventurer_id: integer (FK/association/relationship with adventurer)
+- created_at: timestamp (auto generated)
+- updated_at: timestamp (auto generated)
+
+Routes:
+GET     /adventurers        =>  adventurers#index     (COLLECTION of all Adventurers and display them)
+GET     /Adventurers/:id    =>  adventurers#show      (1 MEMBER, loads and displays a single adventurer)
+# example: localhost:3000/adventurers/2  ... that's going to load adventurer_id = 2
